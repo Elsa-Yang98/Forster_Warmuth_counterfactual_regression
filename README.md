@@ -6,7 +6,7 @@ The file to source is `toSource.R`, this contains all the main functions used in
 
 
 ## Synthetic data.
-1. save_plotdata_uniform.R generates the data where the covariate X follows a uniform distribution, and uses series_df function from `toSourse.R` to generate estimates using various methods including dry, Forster¡ª=Warmth and least squares estimators with different basis. It saves the output into `plotdata_uniform_2000.RData`.
+1. save_plotdata_uniform.R generates the data where the covariate X follows a uniform distribution, and uses series_df function from `toSourse.R` to generate estimates using various methods including drl, Forster-Warmth and least squares estimators with different basis. It saves the output into `plotdata_uniform_2000.RData`.
 2. `save_plotdata_mixture.R` generates the data where the covariate X follows a heavy-tailed distribution, and uses `series_df` function from `toSourse.R `to generate estimates and gives output `plotdata_mixture_2000.RData`, which is for sample size 2000. `plotdata_mixture_400.RData` is likewise generated for sample size n=400.
 3. Finally, `ggplot_uniform.R` takes in `plotdata_uniform_2000.RData` and produces output `ggplot_uniform.pdf`; And ggplot_mixture.R takes in both `plotdata_mixture_2000.RData` and `plotdata_mixture_400.RData`, and gives output `ggplot_mixture.pdf`.
 
@@ -19,4 +19,5 @@ And give mean and std for the bs and polynomial basis using cross_validation, th
 2.1. `save_plotdata_proxy_cv_bs_poly.R` takes in `pseudo_proxy.RData`,
 And give mean and std for the bs and polynomial basis using cross_validation, the main function is `series_cv_new`, which is in `toSource.R`. It outputs the plotting data `proxy_plotdata.RData`.
 3. Finally, `ggplot_unconfound_proxy.R` takes in `unconfound_plotdata.RData` and `proxy_plotdata.RData`. This produces `ggplot_poly_bs.pdf`.
+
 
